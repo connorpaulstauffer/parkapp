@@ -8,3 +8,40 @@
 
   <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
 </div>
+
+<!-- Carousel -->
+<div id="home-carousel" class="carousel slide" data-ride="carousel" >
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#home-carousel" data-slide-to="1"></li>
+    <li data-target="#home-carousel" data-slide-to="2"></li>
+  </ol>
+  
+  <!-- Image wrappers -->
+  <div class="carousel-inner" >
+    <!-- First slide -->
+    <div class="item active">
+      <%= image_tag "halfdome.jpg", class: "carousel-pics" %>
+    </div>
+    <!-- Second slide -->
+    <div class="item">
+      <%= image_tag "glacier.jpg", class: "carousel-pics" %>
+    </div>
+    <!-- Fourth slide -->
+    <div class="item">
+      <%= image_tag "yosemite.jpg", class: "carousel-pics" %>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#home-carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#home-carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  
+</div>
