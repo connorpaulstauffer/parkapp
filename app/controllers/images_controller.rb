@@ -7,19 +7,24 @@ class ImagesController < ApplicationController
     @image = current_user.images.build(image_params)
     if @image.save
       flash[:success] = "Image uploaded!"
-      redirect_to root_url
+      redirect_to current_user
     else
-      render 'static_pages/home'
+      @user = current_user
+      initialize_show
+      render 'users/show'
     end
   end
 
   def destroy
+    @image.destroy
+    flash[:success] = "Image deleted"
+    redirect_to request.referrer || root_url
   end
   
   private
 
     def image_params
-      params.require(:image).permit(:image_file)
+      params.fetch(:image, {}).permit(:image_file)
     end
     
     def correct_user
