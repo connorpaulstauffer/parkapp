@@ -11,6 +11,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @reviews = @user.reviews.paginate(page: params[:page])
+    @images = @user.images.paginate(page: params[:page])
+    @image = current_user.images.build if logged_in?
   end
   
   def new
