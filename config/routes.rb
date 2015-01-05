@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-  resources :users
+  resources :users,               :has_many => [:images, :reviews]
+  resources :parks,               :has_many => [:images, :reviews]
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :reviews,             only: [:create, :destroy]

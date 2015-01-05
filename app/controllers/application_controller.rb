@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
   
+  # Separated from users controller for external links
   def initialize_show
     @reviews = @user.reviews.paginate(page: params[:page])
     @images = @user.images.paginate(page: params[:page])
