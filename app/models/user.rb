@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   
   has_many :reviews, dependent: :destroy # If a user is destroyed, all his reviews are destroyed. I might want to change this.
+  has_many :images, dependent: :destroy # If a user is destroyed, all his images are destroyed. I might want to change this.
   
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save   :downcase_email
