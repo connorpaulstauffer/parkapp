@@ -257,7 +257,7 @@ input {
 }
 
 
-/* reviewss */
+/* reviews */
 
 .reviews {
   list-style: none;
@@ -272,7 +272,7 @@ input {
   }
   .content {
     display: block;
-    margin-left: 60px;
+    margin-left: 0;
     img {
       display: block;
       padding: 5px 0;
@@ -281,7 +281,7 @@ input {
   .timestamp {
     color: $gray-light;
     display: block;
-    margin-left: 60px;
+    margin-left: 0px;
   }
   .gravatar {
     float: left;
@@ -323,3 +323,55 @@ span.picture {
 .pagination {
   margin-left: 10px;
 }
+
+
+/* Park index title fix */
+
+#parks-title {
+  margin-left: 10px;
+}
+
+
+/* Fix navbar */
+
+.navbar-static-top {
+  margin-top: -60px;
+}
+
+
+
+/* Images */
+
+.image-stream {
+  width: 100%;
+  overflow: hidden;
+}
+
+.park-image img {
+  width: 95%;
+}
+
+/*
+.park-image:hover {
+  opacity: 0.3; 
+  filter: alpha(opacity=30);
+}
+*/
+
+.image-overlay {
+  width:340px; 
+  height:217px; 
+  background:#FFF; 
+  opacity:0;
+}
+
+.park-image:hover .image-overlay h3 {
+  opacity: 0.6; 
+  text-align:justify; 
+  color:#000000; font-size:20px; 
+  font-weight:700; 
+  font-family:"Times New Roman", Times, serif; 
+  padding:30px;
+}
+
+

@@ -1,11 +1,11 @@
-<li class="col-md-8" id="image-<%= image.id %>">
-  <%= link_to gravatar_for(image.user, size: 50), image.user %>
-  <span class="user"><%= link_to image.user.name, image.user %></span>
+<li class="col-md-6 park-image" id="image-<%= image.id %>">
+  <span class="user"><%= link_to image.park.name, image.park %></span>
   <span class="content">
     <%= image_tag(image.image_file.url, class: "img-thumbnail") %>
   </span>
   <span class="timestamp">
-    Posted <%= time_ago_in_words(image.created_at) %> ago.
+    Posted <%= time_ago_in_words(image.created_at) %> ago 
+    by <%= link_to image.user.name, image.user %>.
     <% if current_user?(image.user) %>
       <%= link_to "delete", image, method: :delete,
                                        data: { confirm: "You sure?" } %>

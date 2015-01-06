@@ -3,10 +3,7 @@
 <div class="container-fluid"> 
   <div class="row">
     <div class="col-md-4">   
-      <h1>All parks</h1>
-      
-      <%= will_paginate %>
-      
+      <h3 id="parks-title">All parks</h3>
       <ul class="parks"> 
         <%= render @parks %>
       </ul>
@@ -14,7 +11,13 @@
       <%= will_paginate %>
     </div>
     <div class="col-md-8">
-      <h1>Images and Reviews</h1>
+      <% if Image.any? %>
+        <h3>Images (<%= Image.count %>)</h3>
+        <ol class="reviews row image-stream">
+          <%= render @images %>
+        </ol>
+        <%= will_paginate @images %>
+      <% end %>
     </div>
   </div>
 </div>
