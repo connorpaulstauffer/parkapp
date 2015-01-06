@@ -17,9 +17,9 @@
     <div class="col-md-8">
       <% if @park.images.any? %>
         <h3>Images (<%= @park.images.count %>)</h3>
-        <ol class="reviews">
-          <%= render @images %>
-        </ol>
+          <ol class="reviews row">
+            <%= render @images %>
+          </ol>
         <%= will_paginate @images %>
       <% end %>
     </div>
