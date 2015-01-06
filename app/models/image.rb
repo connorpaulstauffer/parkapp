@@ -1,6 +1,6 @@
 class Image < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :park
+  belongs_to :user, foreign_key: :user_id
+  belongs_to :park, foreign_key: :park_id
   default_scope -> { order(created_at: :desc) }
   mount_uploader :image_file, ImageUploader
   validates :user_id, presence: true

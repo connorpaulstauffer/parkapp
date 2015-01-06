@@ -3,6 +3,7 @@
   <span class="image">
     <%= f.file_field :image_file, accept: 'image/jpeg,image/gif,image/png' %>
   </span>
+  <%= hidden_field_tag :park_id, params[:id] %>
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>
 

@@ -4,7 +4,9 @@ class ImagesController < ApplicationController
   before_action :correct_user,   only: :destroy
   
   def create
-    @image = current_user.images.build([image_params, park_id: params[:park_id]])
+    @image = Image.new(image_params)
+    @image.user_id = current_user.id
+    @image.park_id = params[:park_id]
     if @image.save
       flash[:success] = "Image uploaded!"
       redirect_to current_user
