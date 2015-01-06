@@ -1,11 +1,18 @@
 <% provide(:title, @park.name) %>
 <div class="container">
-  <section class="park_info">
-    <h1>
-      <%= @park.name %>
-    </h1>  
-    <h2>
-      <%= @park.state %>
-    </h2>
-  </section>    
+  <div class="row"> 
+    <div class="col-md-4">
+      <section class="park_info">
+        <h1>
+          <%= @park.name %>
+        </h1>  
+        <h2>
+          <%= @park.state %>
+        </h2>
+      </section> 
+      <section class="image_form">
+        <%= render 'shared/image_form' %>
+      </section>
+    </div>
+  </div>   
 </div>

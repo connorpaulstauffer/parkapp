@@ -6,6 +6,7 @@ class ParksController < ApplicationController
   
   def show
     @park = Park.find(params[:id])
+    @image = current_user.images.build(park_id: params[:id]) if logged_in?
   end
   
 end
