@@ -9,7 +9,7 @@ class ImagesController < ApplicationController
     @image.park_id = params[:park_id]
     if @image.save
       flash[:success] = "Image uploaded!"
-      redirect_to current_user
+      redirect_to request.referrer
     else
       @user = current_user
       initialize_show

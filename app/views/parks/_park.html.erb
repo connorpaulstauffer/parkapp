@@ -1,6 +1,6 @@
 <li>
   <%= link_to park.name, park %>
-  <% if current_user.admin? %>
+  <% if logged_in? && current_user.admin? %>
     | <%= link_to "delete", park, method: :delete,
                                   data: { confirm: "You sure?" } %>
   <% end %>

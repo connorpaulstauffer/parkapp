@@ -18,9 +18,6 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  padding-top: 60px;
-}
 
 section {
   overflow: auto;
@@ -331,47 +328,17 @@ span.picture {
   margin-left: 10px;
 }
 
-
-/* Fix navbar */
-
-.navbar-static-top {
-  margin-top: -60px;
-}
-
-
-
 /* Images */
 
-.image-stream {
-  width: 100%;
-  overflow: hidden;
-}
-
 .park-image img {
-  width: 95%;
+  max-width: 95%;
+  max-height: 90%;
 }
 
-/*
-.park-image:hover {
-  opacity: 0.3; 
-  filter: alpha(opacity=30);
-}
-*/
-
-.image-overlay {
-  width:340px; 
-  height:217px; 
-  background:#FFF; 
-  opacity:0;
+.park-image {
+  height: 400px;
 }
 
-.park-image:hover .image-overlay h3 {
-  opacity: 0.6; 
-  text-align:justify; 
-  color:#000000; font-size:20px; 
-  font-weight:700; 
-  font-family:"Times New Roman", Times, serif; 
-  padding:30px;
-}
+
 
 
