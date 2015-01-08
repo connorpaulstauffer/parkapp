@@ -1,7 +1,7 @@
 class ParksController < ApplicationController
   
   def index
-    @parks = Park.paginate(page: params[:page])
+    @parks = Park.all
     @images = Image.paginate(page: params[:page])
   end
   

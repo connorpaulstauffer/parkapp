@@ -254,57 +254,14 @@ input {
 }
 
 
-/* reviews */
-
-.reviews {
-  list-style: none;
-  padding: 0;
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
-  .user {
-    margin-top: 5em;
-    padding-top: 0;
-  }
-  .content {
-    display: block;
-    margin-left: 0;
-    img {
-      display: block;
-      padding: 5px 0;
-    }
-  }
-  .timestamp {
-    color: $gray-light;
-    display: block;
-    margin-left: 0px;
-  }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
-  }
-}
-
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
-}
-
-span.picture {
-  margin-top: 10px;
-  input {
-    border: 0;
-  }
-}
-
-
 /* Parks index */
 
 .parks {
+  height: 400px;
+  width: 100%;
+  line-height: 2em;
+  border: 1px solid #ccc;
+  overflow: scroll;
   list-style: none;
   margin: 0;
   li {
@@ -322,23 +279,24 @@ span.picture {
 }
 
 
-/* Park index title fix */
-
-#parks-title {
-  margin-left: 10px;
-}
-
 /* Images */
 
-.park-image img {
-  max-width: 95%;
-  max-height: 90%;
+.image-stream {
+  list-style: none;
+  padding: 0;
 }
 
 .park-image {
   height: 400px;
+  img {
+    max-width: 95%;
+    max-height: 90%;
+  }
 }
 
 
+/* Navbar */
 
-
+.navbar {
+  margin-bottom: 1px;
+}
