@@ -8,7 +8,11 @@
       </ul>
     </div>
     <div class="col-md-8 col-sm-12">
-      Div for map
+      <div id='map'></div>
+      <script>
+      L.mapbox.accessToken = 'pk.eyJ1IjoiY29ubm9yLXBhdWwtc3R1YWZmZXIiLCJhIjoidXJZTTVIRSJ9.8j0ZSCosB_2NKkpEDrVggA';
+      var map = L.mapbox.map('map', 'connor-paul-stuaffer.kmn3i868').setView([36.563, -99.404], 4);
+      </script>
     </div>
   </div>
   <div class="row">
