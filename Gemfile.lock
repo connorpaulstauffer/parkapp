@@ -93,6 +93,7 @@ GEM
       fog-core
       fog-json
     formatador (0.2.5)
+    geocoder (1.2.6)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     hike (1.2.3)
@@ -216,6 +217,7 @@ DEPENDENCIES
   coffee-rails (= 4.1.0)
   faker (= 1.4.2)
   fog (= 1.23.0)
+  geocoder
   jbuilder (= 2.2.3)
   jquery-rails (= 4.0.0.beta2)
   mapbox-rails
