@@ -43,5 +43,6 @@ park_name_list.zip(park_state_list).each do |n, s|
   name = n
   state = s
   country = "USA"
-  Park.create!(name: name, state: state, country: country)
+  coordinates = Geocoder.coordinates(name + " " + "National Park")
+  Park.create!(name: name, state: state, country: country, latitude: coordinates[0], longitude: coordinates[1])
 end
