@@ -10,9 +10,9 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require mapbox
 //= require jquery
 //= require jquery_ujs
+//= require mapbox
 //= require bootstrap
-//= require turbolinks
+//= require jquery.turbolinks
 //= require_tree .
