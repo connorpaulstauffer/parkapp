@@ -1,5 +1,5 @@
 <li>
-  <%= link_to park.name, park %>
+  <%= link_to park.name, park, class: "park", data: {latitude: park.latitude, longitude: park.longitude, name: park.name, state: park.state} %>
   <% if logged_in? && current_user.admin? %>
     | <%= link_to "delete", park, method: :delete,
                                   data: { confirm: "You sure?" } %>

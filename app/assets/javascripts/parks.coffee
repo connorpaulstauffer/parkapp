@@ -6,9 +6,15 @@
 # on success, parse it and
 # hand it over to MapBox for mapping
 
-$.ajax
-  dataType: 'text'
-  url: 'parks.json'
-  success: (data) ->
-    geojson = $.parseJSON(data)
-    map.featureLayer.setGeoJSON(geojson)
+$ = jQuery
+
+$ ->
+  for park in $(".park")
+    $park = $(park)
+    lat = $park.data("latitude")
+    lon = $park.data("longitude")
+    name = $park.data("name")
+    state = $park.data("state")
+    marker = L.marker([lat, lon]).addTo(map)
+    marker.bindPopup("<b>#{name}</b><br>#{state}")
+    
